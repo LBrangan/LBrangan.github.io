@@ -39,10 +39,10 @@
     <link href="assets/css/main.css" rel="stylesheet" />
   </head>
 
-  <body class="index-page">
+  <body class="resume-page">
     <header id="header" class="header d-flex align-items-center fixed-top">
       <div
-        class="container container-xl position-relative d-flex align-items-center justify-content-between"
+        class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between"
       >
         <a href="index.html" class="logo d-flex align-items-center">
           <!-- Uncomment the line below if you also wish to use an image logo -->
@@ -52,9 +52,9 @@
 
         <nav id="navmenu" class="navmenu text-black d-flex justify-content-end">
           <ul class="text-black">
-            <li><a href="index.html" class="active fw-semibold">Home</a></li>
+            <li><a href="index.html" class="fw-semibold">Home</a></li>
             <li><a href="about.html" class="fw-semibold">About</a></li>
-            <li><a href="resume.html" class="fw-semibold">Resume</a></li>
+            <li><a href="resume.html" class="active fw-semibold">Resume</a></li>
             <li><a href="portfolio.html" class="fw-semibold">Portfolio</a></li>
           </ul>
           <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
@@ -63,114 +63,106 @@
     </header>
 
     <main class="main">
-      <!-- Hero Section -->
-      <div id="hero" class="hero section dark-background tab-content active">
-        <img src="assets/img/background.png" alt="" data-aos="fade-in" />
-        <div class="container" data-aos="zoom-out" data-aos-delay="100">
-          <h3 class="fw-bold">Hello, I'm</h3>
-          <h2 class="">Lancelot P. Brangan</h2>
+      <!-- Page Title -->
+      <div class="page-title" data-aos="fade">
+        <div class="container"></div>
+        <nav class="breadcrumbs">
+          <div class="container"></div>
+        </nav>
+      </div>
+      <!-- End Page Title -->
+      <!--Resume-->
+      <section id="resume" class="resume section tab-content">
+        <div class="container">
+          <div class="container section-title" data-aos="fade-up">
+            <h2>Resume</h2>
+            <div class="text-center fw-bold">
+              <strong class="strong">My Resume </strong>
+            </div>
+          </div>
 
-          <p>
-            I am a
-            <span
-              class="typed"
-              data-typed-items="Student, Developer, Freelancer"
-              >Front-End Developer</span
-            ><span class="typed-cursor typed-cursor--blink"></span>
-          </p>
-          <div class="social-links">
-            <a href="https://www.facebook.com/launcex.01"
-              ><i class="bi-facebook"></i
-            ></a>
-            <a href="https://www.instagram.com/_lanxeelot/"
-              ><i class="bi-instagram"></i
-            ></a>
-            <a href="https://www.linkedin.com/in/lancelot-brangan-45413134a/"
-              ><i class="bi-linkedin black"></i
-            ></a>
+          <div class="row">
+            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+              <h3 class="resume-title text-center">Education</h3>
+              <hr />
+              <div class="resume-item">
+                <h4 class>Bachelor of Science &amp; Information Systems</h4>
+                <h5 class="fw-semibold">2022 - 2026</h5>
+                <p><em>Caraga State University</em></p>
+                <p>Brgy. Ampayon, Butuan City, Philippines</p>
+              </div>
+              <!-- Edn Resume Item -->
+
+              <div class="resume-item">
+                <h4>
+                  Science, Technology, Engineering &amp; Mathematics (STEM)
+                </h4>
+                <h5 class="fw-semibold">2020 - 2022</h5>
+                <p><em>Father Saturnino Urios University (FSUU)</em></p>
+                <p>San Francisco St. Butuan City, Philippines</p>
+              </div>
+              <hr />
+            </div>
+
+            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+              <h3 class="resume-title text-center">My Certificates</h3>
+              <hr />
+              <div class="resume-item">
+                <h4>
+                  Introduction to HTML
+                  <a href="https://www.sololearn.com/certificates/CC-RKZDVJLN"
+                    ><i class="bi bi-link"></i
+                  ></a>
+                </h4>
+                <h5>August 15, 2024</h5>
+              </div>
+              <div class="resume-item">
+                <h4>
+                  Introduction to CSS
+                  <a href="https://www.sololearn.com/certificates/CC-GACTAMHS"
+                    ><i class="bi bi-link"></i
+                  ></a>
+                </h4>
+                <h5>August 25, 2024</h5>
+              </div>
+              <div class="resume-item">
+                <h4>
+                  Introduction to JAVA
+                  <a href="https://www.sololearn.com/certificates/CC-O7DYRHUU"
+                    ><i class="bi bi-link"></i
+                  ></a>
+                </h4>
+                <h5>October 10, 2024</h5>
+              </div>
+              <div class="resume-item">
+                <h4>
+                  Introduction to JavaScript
+                  <a href="https://www.sololearn.com/certificates/CC-OE0GUSMS"
+                    ><i class="bi bi-link"></i
+                  ></a>
+                </h4>
+                <h5>October 15, 2024</h5>
+              </div>
+              <div class="resume-item">
+                <h4>
+                  Web Development
+                  <a href="https://www.sololearn.com/certificates/CC-EUAUC9IU"
+                    ><i class="bi bi-link"></i
+                  ></a>
+                </h4>
+                <h5>November 12, 2024</h5>
+                <hr />
+              </div>
+              <!-- Edn Resume Item -->
+            </div>
           </div>
         </div>
-      </div>
-      <!-- /Hero Section -->
+      </section>
     </main>
 
-    <section id="portfolio" class="portfolio section">
-      <div class="container">
-        <div class="container section-title" data-aos="fade-up">
-          <div class="text-center fw-bold">
-            <strong class="strong">Current Projects </strong>
-          </div>
-        </div>
+    <!--Footer-->
 
-        <!-- End Portfolio Filters -->
-
-        <div
-          class="row gy-4 isotope-container"
-          data-aos="fade-up"
-          data-aos-delay="200"
-        >
-          <!-- End Portfolio Item -->
-
-          <div
-            class="col-lg-6 col-md-6 portfolio-item isotope-item filter-books"
-          >
-            <div class="portfolio-content h-110">
-              <img
-                src="assets/img/portfolio/app-1.png"
-                class="img-fluid"
-                alt=""
-              />
-              <div class="portfolio-info">
-                <h4>Project 1</h4>
-                <p>CSU-CAA Centralized Management System</p>
-                <a
-                  href="assets/img/portfolio/app-1.png"
-                  data-gallery="portfolio-gallery-book"
-                  class="glightbox preview-link"
-                  ><i class="bi bi-zoom-in"></i
-                ></a>
-              </div>
-            </div>
-            <p class="text-center pt-5">
-              A platform designed in streamlining manual processes into
-              automative tasks of the CAA-LSG in handling their events,
-              managements, and their logs much more efficiently.
-            </p>
-          </div>
-          <!-- End Portfolio Item -->
-
-          <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-app">
-            <div class="portfolio-content h-110">
-              <img
-                src="assets/img/portfolio/app-2.png"
-                class="img-fluid"
-                alt=""
-              />
-              <div class="portfolio-info">
-                <h4>App 2</h4>
-                <p>EveSync</p>
-                <a
-                  href="assets/img/portfolio/app-2.png"
-                  data-gallery="portfolio-gallery-app"
-                  class="glightbox preview-link"
-                  ><i class="bi bi-zoom-in"></i
-                ></a>
-              </div>
-            </div>
-            <p class="text-center mt-5">
-              A mobile application designed for managing events. It is an
-              application for a much more seamless and efficient registration of
-              events enabling the host and user a smooth and seamless exchange.
-            </p>
-          </div>
-          <!-- End Portfolio Item -->
-        </div>
-        <!-- End Portfolio Container -->
-      </div>
-    </section>
-    <!-- /Portfolio Section -->
-
-    <footer id="footer" class="footer">
+    <section id="footer" class="footer">
       <h3>Get in touch with me below!</h3>
       <div class="container">
         <div class="social-links d-flex justify-content-center">
@@ -185,8 +177,7 @@
           ></a>
         </div>
       </div>
-    </footer>
-
+    </section>
     <!-- Scroll Top -->
     <a
       href="#"
