@@ -830,24 +830,22 @@ section,
   background: none;
   border-radius: 0;
 }
-
 .skills .progress .skill {
   color: var(--heading-color);
   padding: 0;
   margin: 0 0 6px 0;
   text-transform: uppercase;
-  display: block;
+  display: absolute;
   font-weight: 600;
   font-family: var(--heading-font);
 }
-
 .skills .progress .skill .val {
   float: right;
   font-style: normal;
 }
 
 .skills .progress-bar-wrap {
-  background: color-mix(in srgb, var(--default-color), transparent 90%);
+  background: color-mix(in srgb, var(--surface-color), transparent 90%);
   height: 10px;
 }
 
@@ -1403,99 +1401,97 @@ section,
 /*--------------------------------------------------------------
 # Contact Section
 --------------------------------------------------------------*/
-.contact .info-item {
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
-  padding: 20px 30px;
-}
-
-.contact .info-item .icon {
-  color: var(--contrast-color);
-  background-color: var(--accent-color);
-  width: 56px;
-  height: 56px;
-  font-size: 24px;
+.card-container {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.card {
+  background: #222;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: var(--heading-color);
+  display: flex;
   align-items: center;
-  transition: all 0.3s ease-in-out;
-  border-radius: 50%;
-  margin-right: 15px;
-}
-
-.contact .info-item h3 {
-  font-size: 18px;
-  font-weight: 700;
-  margin: 0 0 2px 0;
-}
-
-.contact .info-item p {
-  padding: 0;
-  margin-bottom: 0;
-  font-size: 14px;
-}
-
-.contact .info-item .social-links a {
-  font-size: 24px;
-  display: inline-block;
-  line-height: 1;
-  margin: 4px 6px 0 0;
+  gap: 15px;
   transition: 0.3s;
-  color: color-mix(in srgb, var(--default-color), transparent 50%);
 }
 
-.contact .info-item .social-links a:hover {
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  width: 100%;
+}
+
+.icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: var(--accent-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  flex-shrink: 0;
+}
+
+.info-text {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.info-text h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: var(--surface-color);
+}
+
+.info-text p {
+  margin: 5px 0 0;
+  color: var(--default-color);
+}
+
+.social-links {
+  display: flex;
+  gap: 10px;
+}
+
+.social-links a {
+  color: var(--default-color);
+  font-size: 20px;
+  transition: 0.3s;
+}
+
+.social-links a:hover {
   color: var(--accent-color);
 }
 
-.contact .php-email-form {
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
-  padding: 30px;
-  margin-top: 30px;
-}
-
-@media (max-width: 575px) {
-  .contact .php-email-form {
-    padding: 20px;
+@media (max-width: 600px) {
+  .card-container {
+    max-width: 100%;
   }
-}
 
-.contact .php-email-form input[type="text"],
-.contact .php-email-form input[type="email"],
-.contact .php-email-form textarea {
-  color: var(--default-color);
-  background-color: color-mix(
-    in srgb,
-    var(--background-color),
-    transparent 50%
-  );
-  border-color: color-mix(in srgb, var(--default-color), transparent 80%);
-  font-size: 14px;
-  padding: 10px 15px;
-  box-shadow: none;
-  border-radius: 0;
-}
+  .card {
+    flex-direction: column;
+    text-align: center;
+    padding: 15px;
+  }
 
-.contact .php-email-form input[type="text"]:focus,
-.contact .php-email-form input[type="email"]:focus,
-.contact .php-email-form textarea:focus {
-  border-color: var(--accent-color);
-}
+  .info-item {
+    flex-direction: column;
+    text-align: center;
+  }
 
-.contact .php-email-form input[type="text"]::placeholder,
-.contact .php-email-form input[type="email"]::placeholder,
-.contact .php-email-form textarea::placeholder {
-  color: color-mix(in srgb, var(--default-color), transparent 70%);
-}
-
-.contact .php-email-form button[type="submit"] {
-  color: var(--contrast-color);
-  background: var(--accent-color);
-  border: 0;
-  padding: 10px 30px;
-  transition: 0.4s;
-  border-radius: 50px;
-}
-
-.contact .php-email-form button[type="submit"]:hover {
-  background: color-mix(in srgb, var(--accent-color), transparent 20%);
+  .icon {
+    margin-bottom: 10px;
+  }
 }
